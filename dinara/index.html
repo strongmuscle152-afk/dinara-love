@@ -1,0 +1,116 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dinara 💘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', cursive;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.2em;
+            text-align: center;
+            text-shadow: 0 0 15px #fff, 0 0 25px #ff69b4;
+            animation: pulse 2.5s infinite;
+            z-index: 2;
+            margin-top: 15px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.9);
+            animation: floatUp 5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+            animation: glow 3s ease-in-out infinite alternate;
+            z-index: 2;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px #fff, 0 0 30px #ff69b4;
+            }
+
+            to {
+                box-shadow: 0 0 40px #fff, 0 0 60px #ff1493;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 👉 ВСТАВЬ СВОЁ ФОТО СЮДА -->
+    <img src="dinaras.jpg" alt="Dinra"> <!-- замени 'dinra.jpg' на свою картинку -->
+
+    <h1>Dinara seni sevaman💖</h1>
+
+    <script>
+        // 💗 создаем сердечки
+        const body = document.body;
+        for (let i = 0; i < 25; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '💗';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+            heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+            body.appendChild(heart);
+        }
+    </script>
+</body>
+
+</html>
